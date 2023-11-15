@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500;600;700;800;900&display=swap');
+body {
+    font-family: "Montserrat";
+    font-weight: 500;
+    background: rgb(255, 255, 255);
+    color: rgb(30, 30, 30);
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbarWrapper{
+    display: none;
+}
+#panel{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#main-top{
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+}
+.nav-img{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+}
+.nav-img img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+.nav-img h1{
+    padding: 10px 0px;
+    font-size: 1.4em;
+    color: chartreuse;
+}
+.nav-img span{
+    color: whitesmoke;
+}
+.menuSection{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menuList {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 35px;
+    font-size: 1em;
+    font-weight: 800;
+}
+
+.ham {
+    color: chartreuse;
+    font-size: 28px;
+    display: none;
+    cursor: pointer;
+}
+.hamClose {
+    display: none;
+    color: chartreuse;
+    font-size: 28px;
+    cursor: pointer;
+}
+.menuItem {
+    color: white;
+}
+.menuItem:hover {
+    color: chartreuse;
+    transform: scale(1.2em);
+    transition: 0.3s;
+}
+
+
+@media (max-width: 1150px) {
+    .navbar {
+        width: 96%;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbarWrapper {
+        padding: 14px 0px;
+    }
+
+    .logoSection a {
+        font-size: 18px;
+    }
+
+    .menuSection {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        height: 100vh;
+        background: black;
+        animation: drawer 0.5s ease-in-out;
+        box-shadow: -2px 0px 10px rgb(0, 0, 0, 0.2);
+        z-index: 99999;
+        padding: 0px 40px;
+        display: none;
+    }
+    .ham {
+        display: block;
+        align-items: end;
+        justify-content: end;
+    }
+    .hamClose {
+        display: block;
+    }
+    .menuList {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+        height: 100%;
+    }
+
+    @keyframes drawer {
+        0% {
+            transform: translateX(300px);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+    }
+}
+
+.container {
+    font-size: 14px;
+    padding: 40px 28px;
+    text-align: justify;
+    margin-top: 50px;
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-top: 30px;
+        padding: 40px 14px;
+    }
+}
+
+.logmenu{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-size: 0.8em;
+    gap: 15px;
+    color: white;
+}
+.logmenu i{
+    color: chartreuse;
+    font-size: 1.5em;
+}
+#main-bottom{
+    background-color: rgb(45,45,45);
+    height: 100%;
+    width: calc(100% - 250px);
+    background: url(images/modern-futuristic-technology-minimalist-diagonal-overlapped-geometric-glow-neon-green-in-dark-background-vector.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    
+}
+.btmdiv1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0px 5px;
+    width: 20%;
+    height: 6%;
+    color: chartreuse;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(6px);
+    font-size: 12px;
+    border-radius: 25px;
+    border: 1px solid chartreuse;
+}
+.btmdiv2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 120px;
+    margin-right: 120px;
+    width: 80%;
+    height: 45%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(6px);
+    border-radius: 25px;
+    border: 1px solid chartreuse;
+    box-shadow: 10px 10px 10px black;
+}
+.btmdiv2 h1{
+    color: chartreuse;
+    font-size: 1.3em;
+    padding: 20px;
+
+}
+.div2img1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+}
+.spec1{
+    width: 50%;
+    height: 80%;
+    border-radius: 25px;
+
+}
+.spec{
+    width: 30%;
+    height: 80%;
+    border-radius: 25px;
+}
+.btmdiv3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 36%;
+    gap: 25px;
+}
+.card{
+    width: 30%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(6px);
+    border-radius: 25px;
+    border: 1px solid chartreuse;
+    box-shadow: 10px 10px 10px black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.card h1{
+    font-size: 1.6em;
+    padding: 20px;
+    color: chartreuse;
+}
+.card p{
+    padding: 0px 0px 10px 0px;
+    color: whitesmoke;
+    font-size: 0.9em;
+}
+.carddiv1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.carddiv1 img{
+    width: 90px;
+    height: 80px;
+    rotate: 40deg;
+}
+.speccard {
+    width: 280px;
+    height: 150px;
+}
